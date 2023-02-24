@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export default class AuthResponse {
+export class UpdateAcronymDto {
   @ApiProperty()
-  jwt: string;
+  definition: string;
 }

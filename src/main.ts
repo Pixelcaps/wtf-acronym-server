@@ -9,6 +9,14 @@ async function bootstrap() {
     .setTitle('World Texting Foundation')
     .setDescription('The WTF Acronym API description')
     .setVersion('0.1')
+    .addBearerAuth({
+      type: 'http',
+      scheme: 'bearer',
+      bearerFormat: 'JWT',
+      name: 'JWT',
+      description: 'Add JWT token',
+      in: 'header',
+    })
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
