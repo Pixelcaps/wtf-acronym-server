@@ -1,9 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export default class AuthDto {
+export class CreateAcronymDto {
   @ApiProperty()
-  email: string;
+  acronym: string;
 
   @ApiProperty()
-  password: string;
+  definition: string;
 }
